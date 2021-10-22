@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
 @Entity
 @Table(name = "ogrenciler")
 public class H1_Ogrenci {
@@ -16,6 +17,11 @@ public class H1_Ogrenci {
 	
 	
 	private int ogrNot;
+	
+	/* Eger bir bilgi java da olsun ama tabloda gorunmesin diyrsak su sekilde yapmalıyız..
+	@Transient
+	private int ogrYas;
+	*/
 	
 	private H2_Dersler dersler;
 	
@@ -66,10 +72,4 @@ public class H1_Ogrenci {
 		return "H01_Ogrenci [ogrId=" + ogrId + ", ogrAd=" + ogrAd + ", ogrNot=" + ogrNot + ", dersler=" + dersler + "]";
 	}
 	
-	
-	
-	
-	
-	
-
 }
