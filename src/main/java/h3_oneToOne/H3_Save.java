@@ -37,6 +37,10 @@ public class H3_Save {
 		session.save(kisi1);
 		session.save(kisi2);
 		session.save(kisi3);
+		
+		// Fetch İslemi
+		
+		System.out.println(gunluk1.getKisi() + " " + gunluk1.getYazilar() + " " + kisi2.getKisiYas() + " " + kisi2.getKisiAd());
 
 		tx.commit();
 		sf.close();
