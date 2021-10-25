@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
@@ -23,7 +24,7 @@ public class H1_Ogrenci {
 
 	private int ogrNot;
 
-	@OneToMany(mappedBy = "ogrenci")
+	@OneToMany(mappedBy = "ogrenci" , orphanRemoval = true, cascade =CascadeType.ALL, fetch = FetchType.EAGER)
 
 	private List<H2_Kitap> kitapListesi = new ArrayList<>();
 

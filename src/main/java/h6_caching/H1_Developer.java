@@ -29,9 +29,10 @@ public class H1_Developer {
 	@OneToMany(mappedBy = "developers")
 	private List <H2_Hesap> bankaListe = new ArrayList<>();
 	
-	
+	// Parametresiz Cons..
 	public H1_Developer() {};
 	
+	// Parametresiz Cons..
 	public H1_Developer(int devId, String devAd, int devYas) {
 	
 		this.devId = devId;
@@ -39,6 +40,7 @@ public class H1_Developer {
 		this.devYas = devYas;
 	}
 
+	// Getters and Setters...
 	public int getDevId() {
 		return devId;
 	}
@@ -71,11 +73,14 @@ public class H1_Developer {
 		this.bankaListe = bankaListe;
 	}
 
+	// toString
 	@Override
 	public String toString() {
-		return "H1_Developer [devId=" + devId + ", devAd=" + devAd + ", devYas=" + devYas
-				+ "]";
+		return "H1_Developer [devId=" + devId + ", devAd=" + devAd + ", devYas=" + devYas + "]";
 	}
+
+	
+	
 	
 	
 

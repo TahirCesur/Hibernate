@@ -25,13 +25,16 @@ public class H2_Hesap {
 	@JoinColumn(name="id")
 	private H1_Developer developers;
 	
+	// Parametresiz Cons..
 	public H2_Hesap() {};
 
-	public H2_Hesap(int id, String bankaAdi) {
+	// Parametreli Cons..
+	public H2_Hesap(int id, String bankaAdi) { // int yanina kesinlikle id yazmaliyim...
 	    this.iban = id;
 		this.bankaAdi = bankaAdi;
 	}
 
+	// Getters and Setters...
 	public int getId() {
 		return iban;
 	}
@@ -56,6 +59,7 @@ public class H2_Hesap {
 		this.developers = developers;
 	}
 
+	// toString
 	@Override
 	public String toString() {
 		return "H2_Hesap [iban=" + iban + ", bankaAdi=" + bankaAdi + "]";
